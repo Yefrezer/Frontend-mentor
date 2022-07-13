@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+
+:root{
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+  --big-shoulder: 'Big Shoulders Display', cursive;
+  --lexend-dec:'Lexend Deca', sans-serif;
+  --body-background:linear-gradient(to right, #8360c3, #2ebf91);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-size: 15px;
+  line-height: 1.4;
+  background: var(--body-background);
+  height: 100vh;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo{
+  position: fixed;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--very-dark-cyan);
+  top: 20px;
+  left: 50px;
+}
+
+.container{
+  max-width: 900px;
+  display: flex;
+  margin: auto;
+}
+
+.box {
+  height: 500px;
+  padding: 2rem;
+  color: white;
+  overflow: hidden;
+}
+
+.box h1{
+  font-family: var(--big-shoulder);
+  font-size: 2.2rem;
+}
+
+.box p{
+  font-family: var(--lexend-dec);
+  font-size: 1rem;
+  opacity: 0.8;
+  margin-top: 1rem;
+  line-height: 1.7;
+  font-weight: 100;
+  word-spacing: 2px;
+}
+
+.box img{
+  margin: 1rem 0;
+  width: 50px;
+}
+
+.btn{
+  font-family: var(--lexend-dec);
+  display: inline-block;
+  margin-top: 7rem;
+  padding: 0.8rem 2.2rem;
+  text-decoration: none;
+  background: #fff;
+  border-radius: 50px;
+  border: 2px solid #fff;
+}
+
+.sedans{background: var(--bright-orange);}
+.suvs{background: var(--dark-cyan);}
+.luxury{background: var(--very-dark-cyan);}
+
+.box:nth-child(1) .btn{color: var(--bright-orange);}
+.box:nth-child(2) .btn{color: var(--dark-cyan);}
+.box:nth-child(3) .btn{color: var(--very-dark-cyan);}
+
+.box .btn:active{
+  background-color: rgba(0,0,0,0);
+  color: #fff;
+}
+/* Container radius */
+.sedans{
+  border-radius: 15px 0 0 15px;
+}
+.luxury{
+  border-radius: 0 15px 15px 0;
+}
+
+@media(max-width: 740px){
+  body{
+    height: 100%;
+  }
+  .container{
+    flex-direction: column;
+    margin: 5rem 0;
+  }
+  .sedans{
+    border-radius: 10px 10px 0 0;
+  }
+  .luxury{
+    border-radius: 0 0 10px 10px;
+  }
+  .btn{
+    margin-top: 1.5rem;
+  }
+
+  .box{
+    height: 400px;
+    padding: 2rem 2rem;
+  }
+
+  .logo{
+    color: rgb(241, 7, 198);
+    left: 35px;
+  }
+}
+
+@media(max-width: 300px){
+  .box{
+    margin: 0.1rem;
+    padding: 0 1rem;
+  }
+}
