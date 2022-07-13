@@ -1,6 +1,6 @@
 # Frontend-mentor
-some frontend mentor challenges
-Link To Them:-
+
+Links To The Actual Websites
 
 The Frontend mentor 1 
 https://frontend-mentor-1.pages.dev/
